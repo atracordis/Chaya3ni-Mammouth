@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane id="Profile" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controllers.frontOffice.UserDisplayController">
+    <children>
+
+        <AnchorPane id="anchorPane1" prefHeight="751.0" prefWidth="1280.0" styleClass="top-segment" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>                       
+
+                <VBox id="VBox" alignment="CENTER" layoutX="268.0" layoutY="155.0" prefHeight="597.0" prefWidth="828.0" spacing="5.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="268.0" AnchorPane.rightAnchor="197.0" AnchorPane.topAnchor="155.0">
+                    <children>
+                        <TableView fx:id="personTable" layoutY="90.0" prefHeight="509.0" prefWidth="750.0" tableMenuButtonVisible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="90.0">
+                            <columns>
+                                <TableColumn fx:id="photo" maxWidth="200" minWidth="200" prefWidth="200" resizable="false" text="" />
+                                <TableColumn fx:id="name" maxWidth="5000.0" minWidth="10.0" prefWidth="120.0" text="First Name" />
+                                <TableColumn fx:id="surname" maxWidth="5000.0" minWidth="10.0" prefWidth="120.0" text="Last Name" />
+                                <TableColumn fx:id="dateBirth" prefWidth="120.0" text="Birth date" />
+                                <TableColumn fx:id="manage" maxWidth="5000.0" minWidth="10.0" prefWidth="120.0" text="Rate User" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </VBox>
+                                        <TextField fx:id="search" layoutX="154.0" layoutY="72.0" maxHeight="30.0" maxWidth="120.0" minHeight="31.0" minWidth="300.0" prefHeight="31.0" prefWidth="120.0" />
+            <Label layoutX="76.0" layoutY="80.0" text="Search" />
+            <Hyperlink fx:id="myAccount" layoutX="1059.0" layoutY="35.0" onAction="#processMyAccount" text="My Account" />
+            <Hyperlink fx:id="backToMenu" layoutX="898.0" layoutY="35.0" onAction="#processBackToMenu" text="Back to Menu" />
+            <Hyperlink fx:id="logout" layoutX="790.0" layoutY="36.0" onAction="#processLogout" text="Logout" />
+          
+            </children>
+        </AnchorPane>
+    </children>  
+    <stylesheets>
+        <URL value="@Login.css" />
+    </stylesheets>
+</AnchorPane>

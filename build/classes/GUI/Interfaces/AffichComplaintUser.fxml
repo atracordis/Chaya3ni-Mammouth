@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="affich" prefHeight="576.0" prefWidth="839.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controllers.frontOffice.AffichComplaintUserController">
+    <stylesheets>
+        <URL value="@affichcomplaintUser.css" />
+    </stylesheets>
+   <children>      
+     <Hyperlink fx:id="Back" layoutX="1104.0" layoutY="90.0" onAction="#processLogout" text="Back to Menu">
+         <font>
+            <Font size="21.0" />
+         </font></Hyperlink>
+
+      <TableView fx:id="view" layoutX="75.0" layoutY="77.0" prefHeight="346.0" prefWidth="723.0">
+        <columns>
+          <TableColumn fx:id="con" prefWidth="103.0" text="Content" />
+          <TableColumn fx:id="ty" text="Type " />
+            <TableColumn fx:id="date" prefWidth="143.0" text="Date Time" />
+            <TableColumn fx:id="atta" prefWidth="214.0" text="Attachement" />
+            <TableColumn fx:id="sta" minWidth="0.0" prefWidth="182.0" text="Status" />
+        </columns>
+      </TableView>
+      <Button fx:id="complaint" layoutX="291.0" layoutY="467.0" mnemonicParsing="false" onAction="#sendCom" prefHeight="42.0" prefWidth="241.0" text="Send Complaint" />
+   </children>
+</AnchorPane>

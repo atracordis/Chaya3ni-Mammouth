@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="ap4" prefHeight="600.0" prefWidth="800.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controllers.backOffice.AffichageFilialeController">
+    <stylesheets>
+        <URL value="@affichagefiliale.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tablefiliale" layoutY="60.0" prefHeight="489.0" prefWidth="800.0">
+        <columns>
+          <TableColumn fx:id="adressef1" prefWidth="116.0" text="Adresse 1" />
+          <TableColumn fx:id="adressef2" prefWidth="136.0" text="Adresse 2" />
+            <TableColumn fx:id="codepostalf" minWidth="7.0" prefWidth="162.0" text="Code Postal" />
+            <TableColumn fx:id="longitudef" minWidth="0.0" prefWidth="169.0" text="Longitude" />
+            <TableColumn fx:id="latitudef" minWidth="0.0" prefWidth="216.0" text="Latitude" />
+        </columns>
+      </TableView>
+      <Button fx:id="supprimerfiliale" layoutX="14.0" layoutY="555.0" mnemonicParsing="false" onAction="#SupprimerfFliale" prefHeight="51.0" prefWidth="250.0" text="Supprimer Filiale" />
+      <TextField fx:id="searchfiliale" layoutX="14.0" layoutY="2.0" />
+      <Button fx:id="ModifierFiliale" layoutX="296.0" layoutY="555.0" mnemonicParsing="false" onAction="#ModifierFiliale" text="Modifier Filiale" />
+      <Button fx:id="nouvellefiliale" layoutX="533.0" layoutY="555.0" mnemonicParsing="false" onAction="#NouvelleFiliale" prefHeight="51.0" prefWidth="224.0" text="Nouvelle Filiale" />
+      <Button fx:id="returnb" layoutX="682.0" layoutY="2.0" mnemonicParsing="false" onAction="#ReturnB" text="Back" />
+   </children>
+   <stylesheets>
+    <URL value="@Login.css" />
+  </stylesheets>
+</AnchorPane>

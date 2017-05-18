@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import java.net.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controllers.backOffice.RideDriverStatsController">
+   <children>
+               <AnchorPane id="anchorPane1" prefHeight="705.0" prefWidth="1280.0" styleClass="top-segment" AnchorPane.bottomAnchor="95.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox id="VBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="32.5" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="40.0">
+                    <children>
+
+      <PieChart fx:id="pieChart" layoutX="132.0" layoutY="96.0" prefHeight="650.0" prefWidth="856.0" />
+   </children>
+                            </VBox>
+
+   </children>
+           </AnchorPane>
+
+   </children>
+    <stylesheets>
+        <URL value="@Login.css" />
+    </stylesheets></AnchorPane>

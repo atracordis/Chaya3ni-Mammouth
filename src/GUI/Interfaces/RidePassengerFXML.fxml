@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="716.0" styleClass="background" stylesheets="@rideanimalfxml.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controllers.frontOffice.RidePassengerController">
+
+ 
+    <children>
+     <Hyperlink fx:id="Back" layoutX="1104.0" layoutY="90.0" onAction="#processLogout" text="Back to Menu">
+         <font>
+            <Font size="21.0" />
+         </font></Hyperlink>
+
+             <AnchorPane id="anchorPane1" prefHeight="601.0" prefWidth="716.0" styleClass="top-segment" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox id="VBox" alignment="CENTER" layoutX="14.0" layoutY="14.0" spacing="5.0" AnchorPane.bottomAnchor="61.5" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="71.0" AnchorPane.topAnchor="14.0">
+                    <children>
+      
+      <TabPane fx:id="tableau" layoutX="6.0" layoutY="2.0" prefHeight="596.0" prefWidth="706.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="AjoutModif" text="Ajouter/Modifier">
+               <content>
+                  <AnchorPane>
+                     <children>
+                        <GridPane layoutY="46.0" prefHeight="206.0" prefWidth="634.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" prefWidth="161.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="230.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="166.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="114.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Ville de départ :" />
+                              <Label text="Ville de destination :" GridPane.rowIndex="2" />
+                              <Label text="Point d'embarquement :" GridPane.rowIndex="1" />
+                              <Label text="Point d'embarquement :" GridPane.rowIndex="3" />
+                              <TextField fx:id="citySource" onKeyPressed="#GoogleMaps" prefHeight="0.0" prefWidth="95.0" GridPane.columnIndex="1" />
+                              <TextField fx:id="placeSource" prefHeight="31.0" prefWidth="145.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="cityDestination" onKeyPressed="#GoogleMaps" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="placeDestination" prefHeight="22.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label prefHeight="16.0" prefWidth="150.0" text="                  Longitude :" GridPane.columnIndex="2" />
+                              <TextField fx:id="longSource" prefHeight="25.0" prefWidth="95.0" GridPane.columnIndex="3" />
+                              <Label prefHeight="16.0" prefWidth="156.0" text="                  Latitude : " GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <TextField fx:id="latSource" prefHeight="25.0" prefWidth="95.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <Label prefHeight="16.0" prefWidth="155.0" text="                 Longitude :" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <TextField fx:id="longDestination" prefHeight="25.0" prefWidth="95.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <TextField fx:id="latDestination" prefHeight="25.0" prefWidth="95.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                              <Label prefHeight="16.0" prefWidth="154.0" text="                 Latitude :" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <Button fx:id="button" layoutX="269.0" layoutY="457.0" onAction="#insertTrajetAction" prefHeight="51.0" prefWidth="176.0" text="Confirmer" />
+                        <GridPane fx:id="gridoption" layoutX="14.0" layoutY="219.0" prefHeight="217.0" prefWidth="586.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <CheckBox fx:id="compagnie" mnemonicParsing="false" text="Compagnie d'animaux" textFill="#7c7c7c" />
+                              <CheckBox fx:id="Animale" mnemonicParsing="false" text="Animale" textFill="#7c7c7c" GridPane.rowIndex="1" />
+                              <CheckBox fx:id="Baggage" mnemonicParsing="false" onAction="#BaggageSelected" text="Baggage" textFill="#7c7c7c" GridPane.rowIndex="2" />
+                              <CheckBox fx:id="handicap" mnemonicParsing="false" text="Handicapé" textFill="#7c7c7c" GridPane.rowIndex="3" />
+                              <CheckBox fx:id="fumeur" mnemonicParsing="false" text="Fumeur" textFill="#7c7c7c" GridPane.rowIndex="4" />
+                              <CheckBox fx:id="Musique" mnemonicParsing="false" onAction="#GenreMusiqueSelected" text="Music" textFill="#7c7c7c" GridPane.rowIndex="5" />
+                              <Label fx:id="poidsLabelle" prefHeight="16.0" prefWidth="187.0" text="                                   Poids :" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="poids" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <CheckBox fx:id="accepterFumeur" mnemonicParsing="false" text="vous accepter quelqu'un d'autre de fumer" textFill="#7c7c7c" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="genreMusiqueLabelle" prefHeight="16.0" prefWidth="193.0" text="                Genre de musique :" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField fx:id="genreMusique" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                           </children>
+                        </GridPane>
+                        <Button fx:id="abc" layoutX="456.0" layoutY="457.0" mnemonicParsing="false" onAction="#goTo" text="Continuer" />
+                        <Label layoutX="53.0" layoutY="35.0" text="Veuillez Saisir les informations concernant l'itineraire de votre Animal" />
+                        <Button fx:id="addGM" layoutX="9.0" layoutY="476.0" mnemonicParsing="false" onAction="#iteneraire" prefHeight="32.0" prefWidth="172.0" text="Add Destination" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab fx:id="Liste" text="Supprimer un trajet">
+               <content>
+                  <AnchorPane>
+                     <children>
+                        <Label layoutX="33.0" layoutY="88.0" text="Liste des Trajets" />
+                        <TableView fx:id="listedestrajets" layoutX="35.0" layoutY="124.0" onMousePressed="#OnSelectedItem" prefHeight="200.0" prefWidth="564.0" />
+                        <TextField fx:id="idTrajetSupp" layoutX="33.0" layoutY="382.0" />
+                        <Label layoutX="37.0" layoutY="347.0" text="Trajet à supprimer" />
+                        <Button layoutX="440.0" layoutY="397.0" mnemonicParsing="false" onAction="#SupprimerTrajet" text="Supprimer" />
+                        <Label layoutX="37.0" layoutY="44.0" text="Rechercher :" />
+                        <TextField fx:id="recherche" layoutX="136.0" layoutY="40.0" onKeyPressed="#AffichageInstantanne" />
+                     </children>
+                  </AnchorPane>
+               </content>
+                        </Tab>
+            <Tab text="Statistique">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <PieChart fx:id="pieChart" layoutX="67.0" layoutY="14.0" />
+                     </children>
+                              </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Test google map">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <WebView fx:id="browser" layoutX="23.0" layoutY="16.0" prefHeight="285.0" prefWidth="588.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      
+   </children>
+                            </VBox>
+
+   </children>
+           </AnchorPane>
+
+    </children>
+</AnchorPane>

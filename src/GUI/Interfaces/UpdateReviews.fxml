@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="affich" prefHeight="591.0" prefWidth="799.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controllers.frontOffice.UpdateReviewsController">
+    <stylesheets>
+        <URL value="@updatereviews.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane fx:id="Modifzone" layoutX="169.0" layoutY="168.0" prefHeight="255.0" prefWidth="462.0">
+         <children>
+            <Button fx:id="boutonmodifier" layoutX="102.0" layoutY="179.0" mnemonicParsing="false" onAction="#update" text="EDIT" />
+            <AnchorPane fx:id="zoneupdate" layoutX="5.0" layoutY="-1.0" prefHeight="166.0" prefWidth="454.0">
+               <children>
+                  <Label layoutX="31.0" layoutY="41.0" prefHeight="21.0" prefWidth="53.0" text="Title" />
+                  <TextField fx:id="txtsujet2" layoutX="163.0" layoutY="36.0" prefHeight="31.0" prefWidth="233.0" />
+                  <TextArea fx:id="txtcontenu2" layoutX="163.0" layoutY="73.0" prefHeight="85.0" prefWidth="233.0" />
+                  <Label layoutX="34.0" layoutY="94.0" prefHeight="21.0" prefWidth="77.0" text="Content" />
+                  <TextField fx:id="txtrating" layoutX="163.0" layoutY="-1.0" prefHeight="31.0" prefWidth="233.0" />
+                  <Label layoutX="34.0" layoutY="4.0" text="Rating " />
+               </children>
+            </AnchorPane>
+            <Button fx:id="Ex" layoutX="249.0" layoutY="179.0" mnemonicParsing="false" onAction="#exbu" prefHeight="35.0" prefWidth="85.0" text="EXIT" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="zonesup" layoutX="86.0" layoutY="390.0" prefHeight="85.0" prefWidth="403.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane id="Profile" fx:id="ap2" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controllers.backOffice.AjoutEmployeController">
+    <children>
+        <AnchorPane id="anchorPane1" prefHeight="600.0" prefWidth="800.0" styleClass="top-segment" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox id="VBox" alignment="CENTER" layoutX="1.0" layoutY="39.0" prefHeight="561.0" prefWidth="800.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="39.0">
+                    <children>
+                        <GridPane id="GridPane" hgap="15.0" vgap="15.0">
+                            <children>
+                                <Label id="Label" styleClass="profileTitle" text="Please fill in the registration form" GridPane.columnIndex="0" GridPane.columnSpan="2147483647">
+                                    
+                                </Label>
+                                <Label id="Label" font="$x1" text="First name" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                    <GridPane.margin>
+                                        <Insets top="2.0" fx:id="x3" />
+                                    </GridPane.margin>
+                                </Label>
+                                <TextField fx:id="name" minWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <Label id="Label" text="Last name" GridPane.columnIndex="0" GridPane.margin="$x3" GridPane.rowIndex="2" />
+                                <TextField fx:id="surname" minWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                <Label id="Label" text="Gender" GridPane.columnIndex="0" GridPane.margin="$x3" GridPane.rowIndex="3" />
+                                <Label id="Label" text="Date of birth" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                                    <GridPane.margin>
+                                        <Insets top="8.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <CheckBox id="" fx:id="newsletter" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                                    
+                                    <GridPane.margin>
+                                        <Insets left="1.0" />
+                                    </GridPane.margin>
+                                </CheckBox>
+                                <Label id="Label" text="Subscribe to Newsletter" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                                    <GridPane.margin>
+                                        <Insets left="28.0" top="3.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <TextField fx:id="email" minWidth="150.0" prefHeight="14.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                <TextField fx:id="phone" minWidth="150.0" prefHeight="14.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                <TextField fx:id="address1" minWidth="150.0" prefHeight="14.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                <TextField fx:id="address2" minWidth="150.0" prefHeight="14.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                <TextField fx:id="postalCode" minWidth="150.0" prefHeight="14.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                <Label id="Label" text="Email" GridPane.rowIndex="5" />
+                                <Label id="Label" text="Telephone" GridPane.rowIndex="6" />
+                                <Label id="Label" text="Address (1):" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                <Label id="Label" text="Address (2):" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                <Label id="Label" text="Postal code" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                <DatePicker fx:id="dateBirth" prefHeight="31.0" prefWidth="319.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                <Label id="Label" text="Photo" GridPane.columnIndex="2" />
+
+                                <ComboBox fx:id="gender" prefWidth="150.0" promptText="Choose your gender" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <items>
+                                        <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="Male" />
+                                            <String fx:value="Female" />
+                                        </FXCollections>
+                                    </items>
+                                </ComboBox>
+                        <Label id="Label" fx:id="message" prefHeight="16.0" prefWidth="200" text="..." GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <ImageView fx:id="imgVw" fitHeight="150.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
+                  <image>
+                    <Image url="@blank.jpg" />
+                  </image>
+                </ImageView>
+
+
+                            <Button fx:id="upload" mnemonicParsing="false" onAction="#processUpload" prefHeight="51.0" prefWidth="224.0" text="Upload Picture" textAlignment="JUSTIFY" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Button fx:id="ajoutemployeliste" defaultButton="true" font="$x1" maxHeight="2.147483647E9" onAction="#AjoutEmployeListe" prefHeight="44.0" prefWidth="133.0" text="Add to list" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                            <Button fx:id="endemploye" defaultButton="true" font="$x1" maxHeight="2.147483647E9" onAction="#EndEmploye" prefHeight="44.0" prefWidth="111.0" text="End" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+
+                            </children>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="NEVER" maxWidth="160.0" minWidth="60.0" prefWidth="157.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="511.0" minWidth="10.0" prefWidth="242.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="314.0" minWidth="10.0" prefWidth="169.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="447.0" minWidth="10.0" prefWidth="226.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="60.0" minHeight="4.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="50.0" minHeight="6.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                        </GridPane>
+                    </children>
+                </VBox>
+            <Label id="Label" fx:id="photopath" font="$x1" layoutX="208.0" layoutY="10.0" />
+            <Label id="Label" fx:id="photoname" font="$x1" layoutX="226.0" layoutY="11.0" text="photpath" />
+            </children>
+        </AnchorPane>
+        <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="102.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+            <children>
+                <Label fx:id="success" font="$x2" opacity="0.0" text="Profile  successfully updated!" />
+            </children>
+        </HBox>
+        <HBox id="HBox" alignment="CENTER" spacing="20.0" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+    </children>  
+   <stylesheets>
+    <URL value="@Login.css" />
+  </stylesheets>
+</AnchorPane>

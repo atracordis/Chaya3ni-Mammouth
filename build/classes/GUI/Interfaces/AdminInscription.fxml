@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane id="Profile" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controllers.backOffice.AdminInscriptionController">
+    <children>
+    <Hyperlink fx:id="backToMenu" layoutX="898.0" layoutY="35.0" onAction="#processBackToMenu" text="Back to Menu" />
+
+        <AnchorPane id="anchorPane1" prefHeight="705.0" prefWidth="1280.0" styleClass="top-segment" AnchorPane.bottomAnchor="95.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox id="VBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="32.5" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="40.0">
+                    <children>
+                        <GridPane id="GridPane" hgap="15.0" vgap="15.0">
+                            <children>
+                                <Label id="Label" styleClass="profileTitle" text="Please fill in the registration form" GridPane.columnIndex="0" GridPane.columnSpan="2147483647">
+                                    <font>
+                                        <Font size="20.0" fx:id="x1" />
+                                    </font>
+                                </Label>
+                                <Hyperlink fx:id="logout" onAction="#processLogout" text="Back to Menu" GridPane.columnIndex="3" GridPane.halignment="RIGHT" />
+                                <Label id="Label" font="$x1" text="First name" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                    <GridPane.margin>
+                                        <Insets top="2.0" fx:id="x3" />
+                                    </GridPane.margin>
+                                </Label>
+                                <TextField fx:id="name" minWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <Label id="Label" font="$x1" text="Last name" GridPane.columnIndex="0" GridPane.margin="$x3" GridPane.rowIndex="2" />
+                                <TextField fx:id="surname" minWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                <Label id="Label" font="$x1" text="Gender" GridPane.columnIndex="0" GridPane.margin="$x3" GridPane.rowIndex="3" />
+                                <Label id="Label" font="$x1" text="Date of birth" GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                                    <GridPane.margin>
+                                        <Insets top="8.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <CheckBox id="" fx:id="newsletter" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                                    <font>
+                                        <Font size="16.0" fx:id="x2" />
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets left="1.0" />
+                                    </GridPane.margin>
+                                </CheckBox>
+                                <Label id="Label" font="$x1" text="Subscribe to Newsletter" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                                    <GridPane.margin>
+                                        <Insets left="28.0" top="3.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <TextField fx:id="email" minWidth="150.0" prefHeight="14.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                <TextField fx:id="username" minWidth="150.0" prefHeight="14.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                <TextField fx:id="phone" minWidth="150.0" prefHeight="14.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                <TextField fx:id="address1" minWidth="150.0" prefHeight="14.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                <TextField fx:id="address2" minWidth="150.0" prefHeight="14.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                                <TextField fx:id="postalCode" minWidth="150.0" prefHeight="14.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                                <Label id="Label" font="$x1" text="Email" GridPane.rowIndex="5" />
+                                <Label id="Label" font="$x1" text="Username" GridPane.rowIndex="6" />
+                                <Label id="Label" font="$x1" text="Password" GridPane.rowIndex="8" />
+                                <Label id="Label" font="$x1" text="Telephone" GridPane.rowIndex="7" />
+                                <Label id="Label" font="$x1" text="Address (1):" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                <Label id="Label" font="$x1" text="Address (2):" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                <Label id="Label" font="$x1" text="Postal code" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                                <DatePicker fx:id="dateBirth" prefHeight="31.0" prefWidth="319.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                <PasswordField fx:id="password" minWidth="150.0" prefHeight="31.0" prefWidth="168.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                <TextField fx:id="secretAnswer" minWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                <Label id="Label" font="$x1" text="Photo" GridPane.columnIndex="2" />
+                                <Label id="Label" font="$x1" text="Secret Question" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                <Label id="Label" font="$x1" text="Secret Answer" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                    
+                                <ComboBox fx:id="secretQuestion" prefHeight="25.0" prefWidth="455.0" promptText="Choose a secret question" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                    <items>
+                                        <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="Where was your mother born?" />
+                                            <String fx:value="Where did you get married?" />
+                                            <String fx:value="Whats your cat's name?" />
+                                            <String fx:value="What's the city of your birth?" />
+                                            <String fx:value="What's your dad's birth location?" />
+                                            <String fx:value="Where do you usually go on summers?" />
+                                            <String fx:value="What's your son's city of birth?" />
+                                            <String fx:value="What's your dog's name?" />
+                                            <String fx:value="Where was your mother born?" />
+                                        </FXCollections>
+                                    </items>
+                                </ComboBox>
+
+                                <ComboBox fx:id="gender" prefWidth="150.0" promptText="Choose your gender" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <items>
+                                        <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="Male" />
+                                            <String fx:value="Female" />
+                                        </FXCollections>
+                                    </items>
+                                </ComboBox>
+                        <Label id="Label" fx:id="message" font="$x1" prefHeight="16.0" prefWidth="200" text="..." GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <ImageView fx:id="imgVw" fitHeight="150.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
+                  <image>
+                    <Image url="@blank.jpg" />
+                  </image>
+                </ImageView>
+
+
+                            <Button fx:id="upload" mnemonicParsing="false" onAction="#processUpload" prefHeight="51.0" prefWidth="224.0" text="Upload Picture" textAlignment="JUSTIFY" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+                            </children>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="NEVER" maxWidth="100.0" minWidth="60.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="511.0" minWidth="10.0" prefWidth="437.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="314.0" minWidth="10.0" prefWidth="166.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="447.0" minWidth="10.0" prefWidth="447.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="60.0" minHeight="4.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="50.0" minHeight="6.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                        </GridPane>
+                    </children>
+                </VBox>
+            <Label id="Label" fx:id="photopath" font="$x1" layoutX="208.0" layoutY="10.0" />
+            <Label id="Label" fx:id="photoname" font="$x1" layoutX="226.0" layoutY="11.0" text="photpath" />
+            </children>
+        </AnchorPane>
+        <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="102.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+            <children>
+                <Label fx:id="success" font="$x2" opacity="0.0" text="Profile  successfully updated!" />
+            </children>
+        </HBox>
+        <HBox id="HBox" alignment="CENTER" spacing="20.0" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+            <children>
+                <Button fx:id="update" defaultButton="true" font="$x1" maxHeight="2.147483647E9" onAction="#processUpdate" prefHeight="50.0" prefWidth="205.0" text="Confirm" HBox.hgrow="ALWAYS" />
+            </children>
+        </HBox>
+    </children>  
+    <stylesheets>
+        <URL value="@Login.css" />
+    </stylesheets>
+</AnchorPane>

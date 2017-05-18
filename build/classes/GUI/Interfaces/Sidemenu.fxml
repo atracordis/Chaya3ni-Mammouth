@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="135.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controllers.frontOffice.SidemenuController">
+   <children>
+      <ImageView fitHeight="77.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@back.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="ajoutertrajet" buttonType="RAISED" prefHeight="47.0" prefWidth="137.0" ripplerFill="RED" style="-fx-background-color: #f1f1f1;" text="Ajouter un Trajet">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="affichetrajet" buttonType="RAISED" prefHeight="50.0" prefWidth="136.0" ripplerFill="RED" style="-fx-background-color: #f1f1f1;" text="Afficher Mes Trajets">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="exit" buttonType="RAISED" prefHeight="50.0" prefWidth="136.0" ripplerFill="RED" style="-fx-background-color: #f1f1f1;" text="Return to menu">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</VBox>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="affich" prefHeight="578.0" prefWidth="855.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controllers.frontOffice.AjoutComplainsController">
+    <stylesheets>
+        <URL value="@ajoutcomplains.css" />
+    </stylesheets>
+   <children>
+      <Label fx:id="rec" layoutX="14.0" layoutY="14.0" text="Complaints " textFill="#eb0a0a">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <TextField fx:id="type" layoutX="258.0" layoutY="126.0" />
+      <TextArea fx:id="contenu" layoutX="253.0" layoutY="177.0" prefHeight="138.0" prefWidth="529.0" />
+      <DatePicker fx:id="date" layoutX="262.0" layoutY="335.0" promptText="Set the Date" />
+      <Button fx:id="send" layoutX="551.0" layoutY="506.0" mnemonicParsing="false" onAction="#sendbu" prefHeight="51.0" prefWidth="119.0" text="send " />
+      <Button fx:id="add" layoutX="308.0" layoutY="378.0" mnemonicParsing="false" onAction="#addbu" prefHeight="51.0" prefWidth="163.0" text="Add a picture" />
+      <ImageView fx:id="imgVw" fitHeight="111.0" fitWidth="181.0" layoutX="44.0" layoutY="378.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXTextField fx:id="fileName1" layoutX="44.0" layoutY="513.0" />
+      <Label layoutX="67.0" layoutY="114.0" text="Title" />
+      <Label layoutX="103.0" layoutY="200.0" text="Contenu " />
+      <Button fx:id="exit" layoutX="701.0" layoutY="506.0" mnemonicParsing="false" onAction="#exitbu" prefHeight="51.0" prefWidth="106.0" text="Exit" />
+   </children>
+</AnchorPane>

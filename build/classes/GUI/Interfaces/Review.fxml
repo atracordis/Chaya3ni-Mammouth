@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import org.controlsfx.control.textfield.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="affich" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controllers.frontOffice.ReviewsController">
+    <stylesheets>
+        <URL value="@reviews.css" />
+    </stylesheets>
+   <children>
+      <JFXTextField fx:id="ti" layoutX="39.0" layoutY="182.0" promptText="TITLE" />
+      <JFXTextField fx:id="ra" layoutX="39.0" layoutY="119.0" promptText="Rating" />
+      <JFXTextArea fx:id="con" layoutX="39.0" layoutY="245.0" maxWidth="257.0" minWidth="218.0" prefHeight="72.0" prefWidth="218.0" promptText="SAY IT" />
+      <DatePicker fx:id="date" layoutX="311.0" layoutY="167.0" promptText="SELECT A DATE " />
+      <JFXButton fx:id="re" buttonType="RAISED" layoutX="285.0" layoutY="307.0" onAction="#reviw" prefHeight="72.0" prefWidth="128.0" ripplerFill="#250808" text="Review" textFill="#791010">
+         <font>
+            <Font size="37.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="annuler" buttonType="RAISED" layoutX="438.0" layoutY="307.0" onAction="#undo" prefHeight="72.0" prefWidth="104.0" text="EXIT" textFill="#651b1b">
+         <font>
+            <Font size="21.0" />
+         </font></JFXButton>
+      <ComboBox fx:id="names" layoutX="58.0" layoutY="37.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

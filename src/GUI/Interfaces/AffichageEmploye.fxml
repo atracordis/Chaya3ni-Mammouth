@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="ap6" prefHeight="600.0" prefWidth="800.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controllers.backOffice.AffichageEmployeController">
+    <stylesheets>
+        <URL value="@affichageemploye.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tableemploye" layoutY="58.0" prefHeight="492.0" prefWidth="800.0">
+        <columns>
+          <TableColumn fx:id="photoe" prefWidth="150.0" text="Photo" />
+          <TableColumn fx:id="nome" prefWidth="110.0" text="Nom" />
+            <TableColumn fx:id="prenome" minWidth="9.0" prefWidth="112.0" text="Prenom" />
+            <TableColumn fx:id="telephonee" minWidth="0.0" prefWidth="124.0" text="Telephone" />
+            <TableColumn fx:id="adressee" prefWidth="277.0" text="Adresse" />
+        </columns>
+      </TableView>
+      <Button fx:id="supprimemploye" layoutX="289.0" layoutY="561.0" mnemonicParsing="false" onAction="#SupprimerEmploye" text="Supprimer" />
+      <TextField fx:id="searchemploye" layoutY="2.0" prefHeight="33.0" prefWidth="177.0" promptText="search" />
+      <Button fx:id="nouvelemploye" layoutX="526.0" layoutY="561.0" mnemonicParsing="false" onAction="#NouvelEmploye" text="Nouvel Employe" />
+      <Button fx:id="returnb" layoutX="682.0" layoutY="2.0" mnemonicParsing="false" onAction="#ReturnB" text="Back" />
+   </children>
+   <stylesheets>
+    <URL value="@Login.css" />
+  </stylesheets>
+</AnchorPane>

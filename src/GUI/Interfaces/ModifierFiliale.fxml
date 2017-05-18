@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="ap5" prefHeight="600.0" prefWidth="800.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controllers.backOffice.ModifierFilialeController">
+    <stylesheets>
+        <URL value="@modifierfiliale.css" />
+    </stylesheets>
+   <children>
+      <GridPane layoutX="-2.0" layoutY="-1.0" prefHeight="600.0" prefWidth="800.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="287.0" minWidth="10.0" prefWidth="287.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="0.0" prefWidth="40.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="320.0" minWidth="10.0" prefWidth="126.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="224.0" minWidth="10.0" prefWidth="224.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="adressefmodif1" GridPane.columnIndex="1" />
+            <TextField fx:id="adressefmodif2" GridPane.columnIndex="4" />
+            <TextField fx:id="latitudemodiff" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="longitudemodiff" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <TextField fx:id="codepostalmodiff" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="validermodif" mnemonicParsing="false" onAction="#ValiderModif" text="Confirm" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Label text="Adresse 1" />
+            <Label text="Adresse2" GridPane.columnIndex="3" />
+            <Label text="Latitude" GridPane.rowIndex="1" />
+            <Label text="longitude" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label text="Code Postal" GridPane.rowIndex="2" />
+            <Button fx:id="returnb" mnemonicParsing="false" onAction="#ReturnB" text="Back" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+   <stylesheets>
+    <URL value="@Login.css" />
+  </stylesheets>
+</AnchorPane>

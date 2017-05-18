@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="affich" prefHeight="619.0" prefWidth="973.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controllers.frontOffice.AfficherReviewsController">
+    <stylesheets>
+        <URL value="@afficherreviews.css" />
+    </stylesheets>
+   <children>
+     <Hyperlink fx:id="Back" layoutX="1104.0" layoutY="90.0" onAction="#processLogout" text="Back to Menu">
+         <font>
+            <Font size="21.0" />
+         </font></Hyperlink>
+      <TableView fx:id="table" layoutX="214.0" layoutY="66.0" prefHeight="304.0" prefWidth="588.0">
+        <columns>
+                 <TableColumn fx:id="name" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="ra" prefWidth="75.0" text="Rating" />
+            <TableColumn fx:id="ti" prefWidth="165.0" text="Title " />
+            <TableColumn fx:id="con" prefWidth="197.0" text="Content" />
+            <TableColumn fx:id="date" prefWidth="150.0" text="DateTime" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="annuler" buttonType="RAISED" layoutX="761.0" layoutY="474.0" onAction="#undo" prefHeight="42.0" prefWidth="114.0" ripplerFill="#d02626" text="EXIT" />
+      <Button fx:id="edit" layoutX="394.0" layoutY="474.0" mnemonicParsing="false" onAction="#editbu" prefHeight="42.0" prefWidth="114.0" text="EDIT " />
+      <Button fx:id="DELETE" layoutX="559.0" layoutY="474.0" mnemonicParsing="false" onAction="#delbu" prefHeight="42.0" prefWidth="131.0" text="DELETE">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <Button fx:id="add" layoutX="226.0" layoutY="474.0" mnemonicParsing="false" onAction="#addbu" prefHeight="42.0" prefWidth="114.0" text="ADD" />
+   </children>
+</AnchorPane>

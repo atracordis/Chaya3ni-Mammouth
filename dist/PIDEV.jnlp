@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="PIDEV.jnlp">
+  <information>
+    <title>PIDEV</title>
+    <vendor>Admin</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="PIDEV.jar" size="39674602" download="eager" />
+    <jar href="lib\GMapsFX-2.0.9.jar" size="166541" download="eager" />
+    <jar href="lib\TrayTester.jar" size="52070" download="eager" />
+    <jar href="lib\acrobat-1.1.jar" size="1615607" download="eager" />
+    <jar href="lib\commons-codec-1.9.jar" size="263965" download="eager" />
+    <jar href="lib\commons-logging-1.2.jar" size="61829" download="eager" />
+    <jar href="lib\controlsfx-8.20.9.jar" size="1018351" download="eager" />
+    <jar href="lib\csvjdbc-1.0-31.jar" size="171983" download="eager" />
+    <jar href="lib\geoip2-2.8.0-javadoc.jar" size="233800" download="eager" />
+    <jar href="lib\geoip2-2.8.0-sources.jar" size="32323" download="eager" />
+    <jar href="lib\geoip2-2.8.0.jar" size="43934" download="eager" />
+    <jar href="lib\httpclient-4.5.2.jar" size="736658" download="eager" />
+    <jar href="lib\httpcore-4.4.4.jar" size="326724" download="eager" />
+    <jar href="lib\itext-2.1.7.jar" size="1130070" download="eager" />
+    <jar href="lib\jackson-annotations-2.8.0.jar" size="55784" download="eager" />
+    <jar href="lib\jackson-core-2.8.2.jar" size="280996" download="eager" />
+    <jar href="lib\jackson-databind-2.8.2.jar" size="1232245" download="eager" />
+    <jar href="lib\javamail-1.4.5.jar" size="507849" download="eager" />
+    <jar href="lib\javax.mail.jar" size="608084" download="eager" />
+    <jar href="lib\jcommon-1.0.0.jar" size="294512" download="eager" />
+    <jar href="lib\jfoenix.jar" size="2211776" download="eager" />
+    <jar href="lib\jfreechart.jar" size="1044877" download="eager" />
+    <jar href="lib\maxmind-db-1.2.1.jar" size="21753" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\openjfx-dialogs-1.0.3.jar" size="149178" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="PIDEV" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="GUI.Interfaces.Main"  name="PIDEV" />
+  <update check="always"/>
+</jnlp>
